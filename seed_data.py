@@ -7,7 +7,7 @@ Base.metadata.create_all(bind=engine)
 
 # Sample data
 sample_videos = [
-   
+      Video(avatar_id=1, language="English", video_type="Report Explainer", disease="Endometriosis", video_url="http://localhost:8000/static/ehsre_demo.mp4"),
     Video(avatar_id=3, language="French", video_type="Embryo Grading Explaination", disease="Endometriosis", video_url="http://localhost:8000/static/eshre_demo3.mp4"),
 ]
 
