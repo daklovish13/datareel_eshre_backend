@@ -5,7 +5,7 @@ sample_videos = [
         "language": "English",
         "video_type": "Report Explainer",
         "disease": "Endometriosis",
-        "video_url": "https://cdn.example.com/video1.mp4"
+        "video_url": "https://datareel-eshre-backend-89ex.onrender.com/static/ehsre_demo.mp4"
     },
     {
         
@@ -13,7 +13,7 @@ sample_videos = [
         "language": "English",
         "video_type": "Initial Consultation",
         "disease": "Tubal Block",
-        "video_url": "https://cdn.example.com/video2.mp4"
+        "video_url": "https://datareel-eshre-backend-89ex.onrender.com/static/eshre_demo2.mp4"
     },
 
 {
@@ -21,6 +21,6 @@ sample_videos = [
         "language": "English",
         "video_type": "Initial Consultation",
         "disease": "Tubal Block",
-        "video_url": "https://cdn.example.com/video2.mp4"
+        "video_url": "https://datareel-eshre-backend-89ex.onrender.com/static/eshre_demo3.mp4"
 }
 ]
