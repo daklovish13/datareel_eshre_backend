@@ -12,7 +12,7 @@ sample_videos = [
         "avatar_id": 2,
         "language": "English",
         "video_type": "Initial Consultation",
-        "disease": "Tubal block",
+        "disease": "Tubal Block",
         "video_url": "https://cdn.example.com/video2.mp4"
     },
 
@@ -20,7 +20,7 @@ sample_videos = [
       "avatar_id": 3,
         "language": "English",
         "video_type": "Initial Consultation",
-        "disease": "Tubal block",
+        "disease": "Tubal Block",
         "video_url": "https://cdn.example.com/video2.mp4"
 }
 ]
