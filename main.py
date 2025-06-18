@@ -24,6 +24,8 @@ app.add_middleware(
 
 @app.post("/get-video-id")
 def get_video_id(payload: VideoFilter, db: Session = Depends(get_db)):
+    print(payload.dict())  # helpful for debugging
+
     video = db.query(Video).filter_by(
         avatar_id=payload.avatar_id,
         language=payload.language,
@@ -38,3 +40,4 @@ def get_video_id(payload: VideoFilter, db: Session = Depends(get_db)):
         "video_id": video.id,
         "video_url": video.video_url
     }
+
