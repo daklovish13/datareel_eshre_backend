@@ -42,7 +42,7 @@ from fastapi.middleware.cors import CORSMiddleware
 #     }
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-from typing import List
+from typing import List,Optional
 from video_data import sample_videos  # import your hardcoded data
 
 app = FastAPI(
@@ -66,20 +66,25 @@ class VideoFilter(BaseModel):
     avatar_id: int
     language: str
     video_type: str
-    disease: str
+    disease: Optional[str]=None
+
+ # Optional in case of Stimulation
 
 @app.post("/get-video-id")
 def get_video_id(payload: VideoFilter):
     print(payload.dict())  # helpful for debugging
 
-    # Filter the sample_videos list
     for video in sample_videos:
-        if (video["avatar_id"] == payload.avatar_id and
+        if (
+            video["avatar_id"] == payload.avatar_id and
             video["language"] == payload.language and
             video["video_type"] == payload.video_type and
-            video["disease"] == payload.disease):
+            (
+                payload.video_type == "Stimulation" or
+                video["disease"] == payload.disease
+            )
+        ):
             return {
-                
                 "video_url": video["video_url"]
             }
 
