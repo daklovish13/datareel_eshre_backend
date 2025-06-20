@@ -73,7 +73,7 @@ class VideoFilter(BaseModel):
 @app.post("/get-video-id")
 def get_video_id(payload: VideoFilter):
     print(payload.dict())  # helpful for debugging
-
+    video_data=payload.dict()
     for video in sample_videos:
         if (
             video["avatar_id"] == payload.avatar_id and
@@ -85,7 +85,8 @@ def get_video_id(payload: VideoFilter):
             )
         ):
             return {
-                "video_url": video["video_url"]
+                "video_url": video["video_url"],
+                "video_data":video_data
             }
 
     raise HTTPException(status_code=404, detail="Currently video is not available")
